@@ -1,0 +1,219 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.seleccion1{
+  display: flex;
+  gap: 20px;
+
+}
+.bg-danger{
+  background-color: aqua ; 
+}
+
+
+.body{
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/pasillo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.836);
+  }
+
+  .navbar{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: rgb(0, 150, 63)
+  }
+  .navbar a{
+    font-size: 20px;
+    text-decoration: none;
+    color:inherit;
+  }
+  .navbar a:hover{
+    color:rgb(118, 255, 175)
+  }
+
+  .list{
+    list-style: none;
+    display: flex;
+    gap: 200px;
+  }
+  #toggler,
+  .navbar label{
+   
+    display: none;
+
+  }
+  .navbar-toggler-icon{
+    font-size: 30px
+  }
+
+
+
+  section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 60%;
+  }
+  section h1{
+    margin-bottom: 40px;
+  }
+
+  section p{
+    font-size: 30px;
+    text-align: center;
+  }
+  .botones{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  
+  footer{
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+
+
+  footer p{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+  
+  /*estilos del booton*/
+  .btn {
+    position: relative;
+    font-size: 17px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color: white;
+   }
+   
+   .btn:hover {
+    background-color: rgb(0, 150, 63);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   .btn::after {
+    background-color: #ffffff;
+   }
+   
+   .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    background-color: rgb(0, 150, 63);
+    color: white;
+    opacity: 0;
+   }
+   @media screen and (max-width: 600px) {
+    .body{
+      display: flex;
+      flex-direction: column;
+    }
+    .menu{
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+    }
+    .list{
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+
+    }
+    .navbar label{
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    #toggler:checked ~.menu{
+      max-height: 100%;
+      justify-content: flex-end;
+      color: white;
+    }
+    .list{
+      gap: 20px;
+    }
+    section p{
+      font-size: 20px;
+      text-align: center;
+    }
+    section h1{
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+  }
+  @media  screen and (max-width: 768px) {
+    .menu{
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+    }
+    .list{
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+
+    }
+    .navbar label{
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    #toggler:checked ~.menu{
+      max-height: 100%;
+      justify-content: flex-end;
+      color: white;
+    }
+    .list{
+      gap: 20px;
+    }
+  }

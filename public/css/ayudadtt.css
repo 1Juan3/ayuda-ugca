@@ -1,0 +1,257 @@
+
+*{margin: 0px;
+    padding:0px}
+  
+
+
+  .navbar{
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 15px;
+      background-color: rgb(0, 150, 63)
+    }
+  
+  .navbar a{
+      font-size: 20px;
+      text-decoration: none;
+      color:inherit;
+    }
+    .navbar a:hover{
+      color:rgb(118, 255, 175)
+    }
+  
+    .list{
+      list-style: none;
+      display: flex;
+      gap: 200px;
+    }
+    #toggler,
+    .navbar label{
+     
+      display: none;
+  
+    }
+    .navbar-toggler-icon{
+      font-size: 30px
+    }
+    .body{
+    background-image: linear-gradient(90deg, transparent 0%, transparent 27%,rgba(196, 196, 196,0.05) 27%, rgba(196, 196, 196,0.05) 42%,transparent 42%, transparent 100%),linear-gradient(135deg, transparent 0%, transparent 38%,rgba(196, 196, 196,0.05) 38%, rgba(196, 196, 196,0.05) 41%,transparent 41%, transparent 100%),linear-gradient(45deg, transparent 0%, transparent 19%,rgba(196, 196, 196,0.05) 19%, rgba(196, 196, 196,0.05) 40%,transparent 40%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    h1{
+    text-align: center;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      }
+    .parrrafo{
+      font-size: 25px;
+      text-align: center;
+      width: 90%;
+      }
+      .parrafo2 p{
+        padding: 50px;
+      }
+      section{
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid black;
+        margin-top: 40px;
+        background-color: rgb(232, 232, 232);
+        width: 90%;
+        font-size: 20px;
+        text-align: center;
+      }
+      .parrafos{
+        display: flex;
+  
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-left: 40px;
+        width: 90%;
+      }
+
+      .llenarFormulario{
+        font-size: 20px;
+        margin-bottom: 50px;
+        margin-top: 20px;
+        margin-left: 30px;
+        padding: 35px;
+        border: 1px solid black;
+        border-radius: 40px;
+        width: 40%;
+      }
+      .llenarFormulario p{
+        font-size: 100%;
+  
+      }
+      .parte2{
+        padding: 50px;
+      }
+      footer{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        margin-top: 40px;
+  
+      }
+  
+  
+    /* css bonotes*/
+  
+    
+    
+  
+    @media screen and (max-width: 600px) {
+  
+      .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+      }
+      .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+  
+      }
+      .navbar label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      #toggler:checked ~.menu{
+        max-height: 100%;
+        justify-content: flex-end;
+        color: white;
+      }
+      .list{
+        gap: 20px;
+      }
+      .card{
+        display: none;
+      }
+      .llenarFormulario{
+        width: 80%;
+        margin-left: none;
+  
+      }
+      .parte2{
+        width: 90%;
+      }
+      .parte2 p{
+        font-size: 80%;
+      }
+  
+  
+    }
+    /* css del otro boton  */
+    
+    .mostrar{
+      display:none;
+    }
+    /*css responsivo*/
+    @media  screen and (max-width: 800px)  {
+      .paarrafos{
+        display :none
+      }
+      .mostrar{
+        display:block;
+      }
+      .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+      }
+      .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .navbar label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      #toggler:checked ~.menu{
+        max-height: 100%;
+        justify-content: flex-end;
+        color: white;
+      }
+      .list{
+        gap: 20px;
+      }
+      .parrafos{
+        flex-direction: column;
+      }
+      .llenarFormulario{
+        width: 70%;
+        font-size:15px ;
+      }
+  
+    }
+  
+    /* expreimento */
+    .card {
+      width: 50%;
+      border:none;
+      background-color: rgb(232, 232, 232);
+    }
+    
+  
+    
+  
+    
+    .content {
+      color: #999;
+      height: 350px;
+      background-color: #eee;
+      padding: 10px;
+      margin: 5px 20px;
+      border-radius: 8px;
+      box-shadow: 8px 8px 10px #ddd, -8px -8px 10px #fff;
+      transform: translateY(-80px) scale(0);
+      transition: all 0.5s;
+    }
+    
+    .card:hover .content {
+      height: 350px;
+      transform: translateY(0) scale(1)
+    }
+    
+
+
+
+
+a:hover{
+  animation: bounce_513 1s infinite;
+}
+
+@keyframes bounce_513 {
+  0%,
+    100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+
+
+
